@@ -1,0 +1,9 @@
+#install script
+#Author - Sumant Murke
+
+- hosts: all
+  sudo: True
+  roles:
+    - { role: ansible-java, java_version: "7", tags:['runtimes']}
+    - { role: ansible-zookeeper, zookeeper_version: "3.4.6"}
+
